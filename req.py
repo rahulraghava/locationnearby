@@ -22,7 +22,7 @@ def output(lt,lg):
             p = {'name': res['results'][i]['name'],'lat':res['results'][i]['geometry']['location']['lat'],'lng':res['results'][i]['geometry']['location']['lng'],'address':w['Response']['View'][0]['Result'][0]['Location']['Address']['Label'],'type':loc[a]}
             final.append(p)
     rep = {'response':final}
-    z = json.dumps(rep)
-    print(z)
+    z = json.dumps(rep, indent=2)
     return z
 
+output(51.50643,-0.12721)

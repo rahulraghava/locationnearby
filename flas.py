@@ -20,7 +20,7 @@ def index():
     r = requests.get(url)
     a = r.json()
     if len(a['Response']['View']) == 0:
-        return json.dumps({'response':[]})
+        return json.dumps({'response':[]},indent=2)
     c = a['Response']['View'][0]['Result'][0]['Location']['DisplayPosition']['Longitude']
     b = a['Response']['View'][0]['Result'][0]['Location']['DisplayPosition']['Latitude']
     d = "Longitude" + str(c) + " & Latitude" + str(b)
